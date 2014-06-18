@@ -1,3 +1,7 @@
+## Invokes the variable x.inverse
+
+  x.inverse <- NULL
+  
 ## Calculates the inverse of the maxtrix and stores it in x.inverse
 
   makeCacheMatrix <- function(x = matrix()) {
