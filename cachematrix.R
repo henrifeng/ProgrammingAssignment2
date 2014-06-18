@@ -18,7 +18,7 @@ cacheSolve <- function(x, ...) {
       return(x.inverse)}
     else {
       message("calculating")
-      return(makeCacheMatrix(x))
+      makeCacheMatrix(x)
     }
   
 }
