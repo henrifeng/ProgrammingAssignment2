@@ -1,7 +1,3 @@
-## Invokes the variable x.inverse
-
-  x.inverse <- NULL
-
 ## Calculates the inverse of the maxtrix and stores it in x.inverse
 
   makeCacheMatrix <- function(x = matrix()) {
@@ -15,7 +11,9 @@
 cacheSolve <- function(x, ...) {
   if(!is.null(x.inverse)){
       message("getting cached data")
-      return(x.inverse)}
+      return(x.inverse)
+    }
+    
     else {
       message("calculating")
       makeCacheMatrix(x)
