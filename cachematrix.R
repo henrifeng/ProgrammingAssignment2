@@ -1,15 +1,24 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Invokes the variable x.inverse
 
-## Write a short comment describing this function
+  x.inverse <- NULL
 
-makeCacheMatrix <- function(x = matrix()) {
+## Calculates the inverse of the maxtrix and stores it in x.inverse
 
-}
+  makeCacheMatrix <- function(x = matrix()) {
+    x.inverse <<- solve(x)
+      return(x.inverse)
+    }
 
 
-## Write a short comment describing this function
+## Checks if the inverse is already existing and returns it. Else it will calculate it and return it.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  if(!is.null(x.inverse)){
+      message("getting cached data")
+      return(x.inverse)}
+    else {
+      message("calculating")
+      return(makeCacheMatrix(x))
+    }
+  
 }
